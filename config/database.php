@@ -35,6 +35,15 @@ return [
 
     'connections' => [
 
+        'auth' => [
+            'driver' => env('DB_AUTH_CONNECTION', 'mysql'),
+            'host' => env('DB_AUTH_HOST', '127.0.0.1'),
+            'port' => env('DB_AUTH_PORT', '3306'),
+            'database' => env('DB_AUTH_DATABASE'),
+            'username' => env('DB_AUTH_USERNAME', 'root'),
+            'password' => env('DB_AUTH_PASSWORD')
+        ],
+
         'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DATABASE_URL'),
